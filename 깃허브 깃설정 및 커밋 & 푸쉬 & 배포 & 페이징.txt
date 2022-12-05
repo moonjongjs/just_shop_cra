@@ -34,7 +34,7 @@ $ git init
 Initialized empty Git repository in D:/국기프론트앤드3기_교사문선종/강의산출물/1205_JUST_SHOP_깃허브_배포/.git/
 
 
-깃설정 목록 확인
+5. 깃설정 목록 확인
 ls -la
 
 $ ls -la
@@ -54,7 +54,7 @@ drwxr-xr-x 1 Administrator 197121       0 12월  5 10:02  src/
 
 
 
-깃환경설정  git config
+6. 깃환경설정  git config
 
 사용자 이름
 사용자 이메일
@@ -83,7 +83,7 @@ moonseonjong@naver.com
 
 
 //////////////////////////
-깃허브 원격지 리파지토리(저장소) 주소 추가 지정 origin(url)
+7. 깃허브 원격지 리파지토리(저장소) 주소 추가 지정 origin(url)
 
 git  remote  add  origin  https://github.com/moonjongjs/just_shop.git
 
@@ -108,6 +108,7 @@ git remote -v
 
 깃허브 원격지 리파지토리(저장소) 주소 추가 지정 origin(url)
 git  remote  add  origin  https://github.com/moonjongjs/just_shop.git
+git  remote  add  origin  https://github.com/moonjongjs/just_shop_cra.git
 
 만약잘못된 주소 확인하기
 git remote -v
@@ -118,20 +119,20 @@ origin  https://github.com/moonjongjs/just_shop.git (push)
 
 
 ////////////////////////////////////////////////////////////
-스테이징 하기
+8. 스테이징 하기
 
 모든(All) 파일 스테이징
 
 git add .
 
 /////////////////////////////////////////////////////
-커밋(commit) 하기 
+9. 커밋(commit) 하기 
 -m => message 
 
 git commit -m  '리액트 create-react-app 저스트 쇼핑몰'
 
 /////////////////////////////////////////////////////////
-푸쉬(push)  하기
+10. 푸쉬(push)  하기
 
 git push origin master
 
@@ -156,6 +157,128 @@ To https://github.com/moonjongjs/just_shop.git
 다시 푸쉬
 
 git add .
+/////////
+$ git add .
+warning: in the working copy of 'src/index.jsx', LF will be replaced by CRLF the next time Git touches it
+
+
 git commit -m  '리액트 create-react-app 저스트 쇼핑몰 확장자 js => jsx 수정'
+/////////
+$ git commit -m  '리액트 create-react-app 저스트 쇼핑몰 확장자 js => jsx 수정'
+[master 3bb57df] 리액트 create-react-app 저스트 쇼핑몰 확장자 js => jsx 수정      
+ 3 files changed, 34 insertions(+)
+ rename src/components/main/{Section1Component.js => Section1Component.jsx} (100%)
+ rename src/components/main/{Section2Component.js => Section2Component.jsx} (100%)
+
+
 git push origin master
+/////////
+$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.03 KiB | 1.03 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: GitHub found 1 vulnerability on moonjongjs/just_shop's default branch (1 high). To find out more, visit:    
+remote:      https://github.com/moonjongjs/just_shop/security/dependabot/1
+remote:
+To https://github.com/moonjongjs/just_shop.git
+   a34c0e7..3bb57df  master -> master
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////
+11. 배포하기(페이징)
+
+1) 상단메뉴 Settings 클릭
+2) 좌측 중간 하단에  Pages 메뉴 클릭
+3) 우측에 GitHub Pages 
+4) Branch
+   GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository. Learn more.
+
+   None / Save
+
+   None 클릭 셀렉트 박스 열리면
+   master 선택한다. => 우측 save 클릭
+
+5) 새로고침 F5
+   CTRL + SHIFT + R 
+   캐시까지 삭제하는 새로고침
+   
+   Your site is live at https://moonjongjs.github.io/just_shop/
+
+   배포주소
+   https://moonjongjs.github.io/just_shop/
+
+   30초 ~ 1분 대기
+   그리고 접속
+
+
+
+
+6) Deployment 도움 사이트
+   => 
+   중간 아래
+   GitHub Pages  로 내려온다.
+
+
+   Step 1: Add homepage to package.json
+   //////////////////////////////////////////////
+   package.json => 깃허브 배포주소 속성과 주소 추가
+   //////////////////////////////////////////////
+   
+   포트폴리오 프로젝트 
+   package.json 에디터에서 연다
+   
+   맨 아래쪽에 추가한다.   
+
+   "homepage": "https://moonjongjs.github.io/just_shop/"
+
+
+
+   Step 2: Install gh-pages and add deploy to scripts in package.json
+   //////////////////////////////////////////////
+   gh-pages => npm i  gh-pages 
+               npm install --save gh-pages
+   //////////////////////////////////////////////
+   
+
+   Step 3: Deploy the site by running npm run deploy
+   //////////////////////////////////////////////
+   npm run deploy  
+   //////////////////////////////////////////////
+
+
+
+
+12. 웹브라우저에 배포주소로 연다
+    웹페이지 열린다. 배포 끝 
+
+
+
+
+
+/////////////////////////////////////
+원본 소스만 올리기
+
+기존 주소 삭제
+git remote remove origin
+
+
+삭제 주소 확인하기
+git remote -v
+
+
+깃허브 원격지 리파지토리(저장소) 주소 추가 지정 origin(url)
+git  remote  add  origin  https://github.com/moonjongjs/just_shop_cra.git
+
+
 
