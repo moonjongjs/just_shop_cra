@@ -1,0 +1,127 @@
+깃허브 깃설정 및 커밋 & 푸쉬 & 배포 & 페이징
+
+깃허브 사이트
+1. 웹브라우저 열기 - 깃허브 로그인
+2. 리파지토리 만들기
+
+
+로컬 프로젝트 작업위치 
+3. 경로확인 
+
+목록 보기 숨김파일까지 모두 보기
+ls -la
+
+$ ls -la
+total 1394
+drwxr-xr-x 1 Administrator 197121       0 12월  5 10:09  ./
+drwxr-xr-x 1 Administrator 197121       0 12월  5 09:52  ../
+-rw-r--r-- 1 Administrator 197121     310 11월 25 10:07  .gitignore
+drwxr-xr-x 1 Administrator 197121       0 12월  5 10:04  node_modules/
+-rw-r--r-- 1 Administrator 197121     835 11월 25 10:17  package.json
+-rw-r--r-- 1 Administrator 197121 1200250 12월  5 10:04  package-lock.json
+drwxr-xr-x 1 Administrator 197121       0 12월  5 09:56  public/
+-rw-r--r-- 1 Administrator 197121    3359 11월 25 10:07  README.md
+drwxr-xr-x 1 Administrator 197121       0 12월  5 10:02  src/
+-rw-r--r-- 1 Administrator 197121      60 12월  5 10:09 '깃허브 깃설정 및 커밋 & 푸쉬 & 배포 & 페이징.txt'
+-rw-r--r-- 1 Administrator 197121    2506 11월 25 12:04  리액트CRA_실행순선.txt
+
+4. 깃설정
+
+git init
+
+
+$ git init
+Initialized empty Git repository in D:/국기프론트앤드3기_교사문선종/강의산출물/1205_JUST_SHOP_깃허브_배포/.git/
+
+
+깃설정 목록 확인
+ls -la
+
+$ ls -la
+total 1401
+drwxr-xr-x 1 Administrator 197121       0 12월  5 10:20  ./
+drwxr-xr-x 1 Administrator 197121       0 12월  5 09:52  ../
+drwxr-xr-x 1 Administrator 197121       0 12월  5 10:20  .git/
+-rw-r--r-- 1 Administrator 197121     310 11월 25 10:07  .gitignore
+drwxr-xr-x 1 Administrator 197121       0 12월  5 10:04  node_modules/
+-rw-r--r-- 1 Administrator 197121     835 11월 25 10:17  package.json
+-rw-r--r-- 1 Administrator 197121 1200250 12월  5 10:04  package-lock.json
+drwxr-xr-x 1 Administrator 197121       0 12월  5 09:56  public/
+-rw-r--r-- 1 Administrator 197121    3359 11월 25 10:07  README.md
+drwxr-xr-x 1 Administrator 197121       0 12월  5 10:02  src/
+-rw-r--r-- 1 Administrator 197121    1353 12월  5 10:22 '깃허브 깃설정 및 커밋 & 푸쉬 & 배포 & 페이징.txt'
+-rw-r--r-- 1 Administrator 197121    2506 11월 25 12:04  리액트CRA_실행순선.txt
+
+
+
+깃환경설정  git config
+
+사용자 이름
+사용자 이메일
+
+git config user.name 'moonjongjs'
+git config user.email 'moonseonjong@naver.com'
+
+
+화면청소
+clear
+
+////////////////////////////////////
+name 확인하기
+git config user.name
+
+email 확인하기
+git config user.email
+
+
+$ git config user.name
+moonjongjs
+
+
+$ git config user.email
+moonseonjong@naver.com
+
+
+//////////////////////////
+깃허브 원격지 리파지토리(저장소) 주소 추가 지정 origin(url)
+
+git  remote  add  origin  https://github.com/moonjongjs/just_shop.git
+
+
+원격지 리파지토리(저장소) 주소 확인하기
+
+git remote -v
+
+$ git remote -v
+origin  https://github.com/moonjongjs/just_shop.git (fetch)
+origin  https://github.com/moonjongjs/just_shop.git (push)
+
+
+만약잘못된 주소면 삭제하기
+
+git remote remove origin
+
+
+만약잘못된 주소 확인하기
+git remote -v
+
+
+깃허브 원격지 리파지토리(저장소) 주소 추가 지정 origin(url)
+git  remote  add  origin  https://github.com/moonjongjs/just_shop.git
+
+만약잘못된 주소 확인하기
+git remote -v
+
+$ git remote -v
+origin  https://github.com/moonjongjs/just_shop.git (fetch)
+origin  https://github.com/moonjongjs/just_shop.git (push)
+
+
+////////////////////////////////////////////////////////////
+스테이징 하기
+
+모든(All) 파일 스테이징
+
+git add .
+
+
